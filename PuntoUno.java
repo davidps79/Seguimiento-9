@@ -3,7 +3,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
 
-public class Main {
+public class PuntoUno {
 	private static BufferedReader in;
 	public static void main(String[] args) throws IOException {
 		in = new BufferedReader(new InputStreamReader(System.in));
@@ -43,23 +43,15 @@ public class Main {
         int fin=n-1;
         
         while(init <= fin){
-            
             int mid= (init+fin)/2;
-            
-            if(arr[mid]==k){
-                
+       
+            if(arr[mid]==k){         
                 return mid;
-                
-            }else if(arr[mid]>k){
-                
+            } else if(arr[mid]>k){
                 fin=mid-1;
-                
-            }else if(arr[mid]<k){
-                
+            } else if(arr[mid]<k){
                 init= mid+1;
-                
             }
-            
         }
         return -1;
         
